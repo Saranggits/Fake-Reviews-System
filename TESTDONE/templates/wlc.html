@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome | Fake Review Detector</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='wlc.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div class="card" id="welcomeCard">
+      <h1 class="neon-text">Fake Review System</h1>
+      <p class="tagline">Detect fake reviews with AI precision</p>
+      
+      <!-- Redirecting button -->
+      <button id="startBtn" class="glow-btn" onclick="window.location.href = '{{ url_for('detect') }}'">Get Started</button>
+
+      <!-- 3D Platform Boxes -->
+      <div class="platform-grid">
+        <div class="platform-box">
+          <a href="https://www.amazon.in" target="_blank" rel="noopener">
+            <div class="box-inner">
+              <div class="box-front">Amazon</div>
+              <div class="box-back">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="platform-box">
+          <a href="https://www.flipkart.com" target="_blank" rel="noopener">
+            <div class="box-inner">
+              <div class="box-front">Flipkart</div>
+              <div class="box-back">
+                <img src="https://cdn.freebiesupply.com/logos/large/2x/flipkart-logo-svg-vector.svg" alt="Flipkart">
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="platform-box">
+          <a href="https://www.meesho.com" target="_blank" rel="noopener">
+            <div class="box-inner">
+              <div class="box-front">Meesho</div>
+              <div class="box-back">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Meesho_logo.png?20230923160934" alt="Meesho">
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Add more platform boxes here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='wlc.js') }}"></script>
+</body>
+</html>
+

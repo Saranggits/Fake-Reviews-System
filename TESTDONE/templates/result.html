@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Result | Fake Review Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='result.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="result-card">
+            <h1>Review Analysis Result</h1>
+            
+            <div class="result-box">
+                <div class="prediction-section">
+                    <h2>Prediction</h2>
+                    <div id="predictionResult" class="prediction-value">
+                        Analyzing...
+                    </div>
+                </div>
+
+                <div class="accuracy-section">
+                    <h2>Confidence Score</h2>
+                    <div class="accuracy-container">
+                        <div id="accuracyResult" class="accuracy-value">0%</div>
+                        <div id="accuracyBar" class="accuracy-bar">
+                            <div id="accuracyFill" class="accuracy-fill"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="{{ url_for('detect') }}" class="back-button">
+                <span class="back-icon">←</span>
+                Back to Detection
+            </a>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='result.js') }}"></script>
+</body>
+</html> 

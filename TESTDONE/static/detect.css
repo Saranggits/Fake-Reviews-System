@@ -1,0 +1,96 @@
+/* Base Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centered Container */
+.container {
+  max-width: 850px;
+  margin: 60px auto;
+  padding: 40px;
+  background: linear-gradient(145deg, #1a1a1a, #232323);
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.1),
+              0 0 60px rgba(0, 255, 200, 0.05);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid #1fd7c5;
+}
+
+/* Heading with Neon Text */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #00ffe7;
+  text-shadow: 0 0 5px #1f433f, 0 0 15px #6b8d89;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+/* Input Fields */
+input[type="url"],
+textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #19dcc8;
+  border-radius: 10px;
+  background-color: #121212;
+  color: #ffffff;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+input[type="url"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #508b90;
+  box-shadow: 0 0 10px #459297;
+}
+
+/* Textarea Height */
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Glowing 3D Analyze Button */
+.analyze-btn {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  padding: 18px;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(145deg, #060808, #7af5d7);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #000;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.3),
+              0 5px 15px rgba(0, 255, 255, 0.3);
+  transition: 0.4s ease;
+}
+
+.analyze-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(7, 233, 233, 0.6);
+}
+
+.analyze-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 5px 12px rgba(0, 255, 255, 0.3);
+}
+

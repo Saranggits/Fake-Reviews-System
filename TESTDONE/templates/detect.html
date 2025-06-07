@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Review Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='detect.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Detect URL & Reviews</h1>
+
+    <form id="detectForm" action="{{ url_for('analyze_reviews') }}" method="POST">
+      <label for="urlInput">Enter URL (Optional):</label>
+      <input type="url" id="urlInput" name="urlInput" placeholder="https://example.com/reviews" />
+
+      <label for="reviewInput">Enter Review (Optional):</label>
+      <textarea id="reviewInput" name="reviewInput" rows="4" placeholder="Enter your review here..."></textarea>
+
+      <button type="submit" class="analyze-btn">Analyze</button>
+    </form>
+
+    <div id="resultsContainer">
+      <h2>Analysis Results:</h2>
+      <pre id="resultsOutput"></pre>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='detect.js') }}"></script>
+</body>
+</html>
